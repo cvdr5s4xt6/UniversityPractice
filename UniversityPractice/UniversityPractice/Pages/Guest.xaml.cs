@@ -12,19 +12,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using UniversityPractice.Pages;
 
-namespace UniversityPractice
+namespace UniversityPractice.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Guest.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Guest : Page
     {
-        public MainWindow()
+        public Guest()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Authorization());
+            DisciplineDataGrid.ItemsSource = App.db.Exam.ToList();
+            DisciplineDataGrid.DataContext = App.db.Exam.ToList();
+
+        }
+
+        private void DisciplineDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+          
         }
     }
 }

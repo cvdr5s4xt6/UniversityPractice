@@ -12,19 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using UniversityPractice.Pages;
 
-namespace UniversityPractice
+namespace UniversityPractice.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Engineer.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Engineer : Page
     {
-        public MainWindow()
+        public Engineer()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Authorization());
         }
     }
 }
