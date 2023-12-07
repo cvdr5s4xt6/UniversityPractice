@@ -10,10 +10,20 @@
 
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBox x:Name="PasswordAuth" Width="146" TextChanged="PasswordAuth_TextChanged"></TextBox>
-            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Пароль</TextBlock>
-            <Button Margin="0 0 0 6" Name="EnterBtn" Click="EnterBtn_Click" >Войти</Button>
-            <Button Margin="0 0 0 0" Name="GuestBtn" Click="GuestBtn_Click"  >Гость</Button>
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" Margin="10">Пост</TextBlock>
+                <ComboBox x:Name="RoleCmBI" Width="143">
+                    <ComboBoxItem Content="Учитель"/>
+                    <ComboBoxItem Content="Заведующий кафедры"/>
+                    <ComboBoxItem Content="Инженер"/>
+                </ComboBox>
+            </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" Margin="0 30">Пароль</TextBlock>
+                <PasswordBox x:Name="PasswordAuthorization" Width="144" PasswordChar="•" VerticalAlignment="Center"></PasswordBox>
+            </StackPanel>
+            <Button Name="EnterBtn" Click="EnterBtn_Click" >Войти</Button>
+            <Button  Name="GuestBtn" Click="GuestBtn_Click" >Гость</Button>
         </StackPanel>
     </Grid>
 </Page>
